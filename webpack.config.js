@@ -12,7 +12,7 @@ const postcssPresets = require('postcss-preset-env');
 
 module.exports = {
   mode: env,
-  entry: ['./src'], // this is where our app lives
+  entry: ['./docs'], // this is where our app lives
   devtool: 'source-map', // this enables debugging with source in chrome devtools
   devServer: {
     hot: true,
@@ -77,7 +77,7 @@ module.exports = {
     }),
     new ESLintPlugin({}),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './docs/index.html',
       filename: './index.html',
     }),
   ],
