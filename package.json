@@ -1,6 +1,7 @@
 {
   "name": "starterpack-caxawu",
   "version": "1.0.0",
+  "homepage": "http://xinaicathywu.me/",
   "description": "*description*",
   "main": "docs/index.js",
   "scripts": {
@@ -19,7 +20,6 @@
   "bugs": {
     "url": "https://github.com/dartmouth-cs52-21S/starterpack-caxawu/issues"
   },
-  "homepage": "https://github.com/dartmouth-cs52-21S/starterpack-caxawu#readme",
   "devDependencies": {
     "@babel/core": "^7.13.15",
     "@babel/eslint-parser": "^7.13.14",
@@ -48,8 +48,10 @@
     "webpack-dev-server": "^3.11.3"
   },
   "dependencies": {
+    "-": "^0.0.1",
     "axios": "^0.21.1",
     "firebase": "^8.4.2",
+    "gh-pages": "^3.2.3",
     "immutable": "*",
     "jquery": "^3.6.0",
     "lodash.debounce": "^4.0.8",
@@ -59,6 +61,7 @@
     "react-icons": "^4.2.0",
     "react-markdown": "^6.0.1",
     "react-router": "^5.2.0",
-    "react-textarea-autosize": "^8.3.2"
+    "react-textarea-autosize": "^8.3.2",
+    "save-dev": "^0.0.1-security"
   }
 }
