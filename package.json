@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "homepage": "https://xinaicathywu.me/",
   "description": "*description*",
-  "main": "docs/index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "SET NODE_ENV=development& webpack serve",
-    "test": "eslint docs",
+    "test": "eslint src",
     "build": "npm run clean; NODE_ENV=production webpack --color",
     "winbuild": "npm run clean & SET NODE_ENV=production& webpack --color",
     "clean": "rimraf dist"
