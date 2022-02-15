@@ -7,7 +7,9 @@ import '../style.scss';
 import About from './about';
 import Other from './other';
 import Portfolio from './portfolio';
-import Art from './art';
+import {
+  Digital, Paintings, Drawings,
+} from './art';
 
 const Nav = (props) => {
   return (
@@ -15,8 +17,53 @@ const Nav = (props) => {
       <li><NavLink to="/">about</NavLink></li>
       <li><NavLink to="/portfolio">portfolio</NavLink></li>
       <li><NavLink to="/other-works">other works</NavLink></li>
-      <li><NavLink to="/art">art</NavLink></li>
+      <li><NavLink to="/art/digital-art">studio & digital art</NavLink></li>
     </ul>
+  );
+};
+
+const SecondaryNav = (props) => {
+  return (
+    <ul>
+      <li><NavLink to="/art/digital-art">digital art</NavLink></li>
+      |
+      <li><NavLink to="/art/paintings">paintings</NavLink></li>
+      |
+      <li><NavLink to="/art/drawings">drawings</NavLink></li>
+    </ul>
+  );
+};
+
+const DigitalPage = (props) => {
+  return (
+    <div className="content">
+      <div className="secondary-nav">
+        <SecondaryNav />
+      </div>
+      <Digital />
+    </div>
+  );
+};
+
+const PaintingsPage = (props) => {
+  return (
+    <div className="content">
+      <div className="secondary-nav">
+        <SecondaryNav />
+      </div>
+      <Paintings />
+    </div>
+  );
+};
+
+const DrawingsPage = (props) => {
+  return (
+    <div className="content">
+      <div className="secondary-nav">
+        <SecondaryNav />
+      </div>
+      <Drawings />
+    </div>
   );
 };
 
@@ -34,7 +81,9 @@ const Header = () => {
         <Route exact path="/" element={About} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/other-works" element={<Other />} />
-        <Route path="/art" element={<Art />} />
+        <Route path="/art/digital-art" element={<DigitalPage />} />
+        <Route path="/art/paintings" element={<PaintingsPage />} />
+        <Route path="/art/drawings" element={<DrawingsPage />} />
         <Route render={() => (<div>Page not found </div>)} />
       </Routes>
     </Router>
