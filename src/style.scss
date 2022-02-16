@@ -10,7 +10,7 @@ body, html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1% 12%;
+  padding: 2vh 12vw;
   background: #FFFFFF;
   box-shadow: 0px 0px 16px rgba(89, 89, 89, 0.25);
   overflow: hidden;
@@ -32,7 +32,7 @@ body, html {
         text-decoration: none;
         color: inherit;
         text-align: right;
-        margin-left: 5vw;
+        margin-left: 4vw;
       }
     }
   }
@@ -62,7 +62,7 @@ body, html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 15%;
+    margin: 0 12vw;
     .row {
       display: flex;
       flex-direction: row;
@@ -72,8 +72,72 @@ body, html {
         max-height: 100%;
         object-fit: cover;
         overflow: hidden;
-        padding: 0 8px;
-        padding-bottom: 16px;
+        padding: 0 0.25vw;
+        padding-bottom: .5vw;
+      }
+    }
+  }
+  .spacer {
+    padding: 3.25em;
+  }
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 0px 16px 0px hsla(0, 0%, 35%, 0.25);
+    margin: 0 12.25vw;
+    margin-bottom: 4em;
+    padding: 0 8px;
+    .top-header {
+      display: inherit;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1.75vh 2vw;
+      padding-bottom: 1.5vh;
+      .title {
+        font-weight: bold;
+      }      
+    }
+    .body {
+      display: inherit;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 2vw;
+      padding-bottom: 1.75vh;
+      .item {
+        display: flex;
+        flex-direction: column;
+        width: 16vw;
+        img {
+          display: block;
+          object-fit: cover;
+          max-height: 100%;
+          box-shadow: 0px 0px 16px 0px hsla(0, 0%, 35%, 0.25);
+          margin-bottom: 1vh;
+        }
+        .description {
+          display: inherit;
+          flex-direction: column;
+          .name {
+            font-weight: bold;
+            margin-bottom: 0.5vh;
+          }
+          .description1 {
+            font-style: italic;
+            margin-bottom: 0.5vh;
+          }
+          .description2 {
+            margin-bottom: 1vh;
+          }
+          .links {
+            display: inherit;
+            flex-direction: column;
+            a {
+              text-align: right;
+            }
+          }
+        }
       }
     }
   }
