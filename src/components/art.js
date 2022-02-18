@@ -56,19 +56,19 @@ const Digital = (props) => {
   return (
     <div className="img-section">
       <div className="row">
-        <img src={diorama1} alt="Diorama 1" />
-        <img src={diorama2} alt="Diorama 2" />
-        <img src={boatRender} alt="boatRender" />
+        <img src={diorama1} alt="Diorama 1" loading="lazy" />
+        <img src={diorama2} alt="Diorama 2" loading="lazy" />
+        <img src={boatRender} alt="boatRender" loading="lazy" />
       </div>
       <div className="row">
-        <img src={dioramaWIP} alt="dioramaWIP" />
-        <img src={boatWIP} alt="boatWIP" />
-        <img src={plant} alt="plant" />
+        <img src={dioramaWIP} alt="dioramaWIP" loading="lazy" />
+        <img src={boatWIP} alt="boatWIP" loading="lazy" />
+        <img src={plant} alt="plant" loading="lazy" />
       </div>
       <div className="row">
-        <img src={room} alt="room" />
-        <img src={juice} alt="juice" />
-        <img src={escher} alt="escher" />
+        <img src={room} alt="room" loading="lazy" />
+        <img src={juice} alt="juice" loading="lazy" />
+        <img src={escher} alt="escher" loading="lazy" />
       </div>
     </div>
   );
@@ -78,23 +78,23 @@ const Paintings = (props) => {
   return (
     <div className="img-section">
       <div className="row">
-        <img src={umbrella} alt="umbrella" />
-        <img src={birds} alt="birds" />
-        <img src={fence} alt="fence" />
+        <img src={umbrella} alt="umbrella" loading="lazy" />
+        <img src={birds} alt="birds" loading="lazy" />
+        <img src={fence} alt="fence" loading="lazy" />
       </div>
       <div className="row">
-        <img src={abstract} alt="abstract" />
-        <img src={world} alt="world" />
-        <img src={landscape} alt="landscape" />
+        <img src={abstract} alt="abstract" loading="lazy" />
+        <img src={world} alt="world" loading="lazy" />
+        <img src={landscape} alt="landscape" loading="lazy" />
       </div>
       <div className="row">
-        <img src={tuckDrive} alt="tuckDrive" />
-        <img src={dragon} alt="dragon" />
+        <img src={tuckDrive} alt="tuckDrive" loading="lazy" />
+        <img src={dragon} alt="dragon" loading="lazy" />
       </div>
       <div className="row">
-        <img src={ghosts} alt="ghosts" />
-        <img src={door} alt="door" />
-        <img src={metal} alt="metal" />
+        <img src={ghosts} alt="ghosts" loading="lazy" />
+        <img src={door} alt="door" loading="lazy" />
+        <img src={metal} alt="metal" loading="lazy" />
       </div>
     </div>
   );
@@ -104,47 +104,47 @@ const Drawings = (props) => {
   return (
     <div className="img-section">
       <div className="row">
-        <img src={fruit1} alt="fruit1" />
-        <img src={fruit2} alt="fruit2" />
-        <img src={fruit3} alt="fruit4" />
-        <img src={fruit4} alt="fruit4" />
+        <img src={fruit1} alt="fruit1" loading="lazy" />
+        <img src={fruit2} alt="fruit2" loading="lazy" />
+        <img src={fruit3} alt="fruit4" loading="lazy" />
+        <img src={fruit4} alt="fruit4" loading="lazy" />
       </div>
       <div className="row">
-        <img src={hand1} alt="hand1" />
-        <img src={hand2} alt="hand2" />
-        <img src={hand3} alt="hand3" />
-        <img src={hand4} alt="hand4" />
-        <img src={hand5} alt="hand5" />
+        <img src={hand1} alt="hand1" loading="lazy" />
+        <img src={hand2} alt="hand2" loading="lazy" />
+        <img src={hand3} alt="hand3" loading="lazy" />
+        <img src={hand4} alt="hand4" loading="lazy" />
+        <img src={hand5} alt="hand5" loading="lazy" />
       </div>
       <div className="row">
-        <img src={bike1} alt="bike1" />
-        <img src={bike2} alt="bike2" />
-        <img src={bike3} alt="bike3" />
-        <img src={bike4} alt="bike4" />
-        <img src={bike5} alt="bike5" />
+        <img src={bike1} alt="bike1" loading="lazy" />
+        <img src={bike2} alt="bike2" loading="lazy" />
+        <img src={bike3} alt="bike3" loading="lazy" />
+        <img src={bike4} alt="bike4" loading="lazy" />
+        <img src={bike5} alt="bike5" loading="lazy" />
       </div>
       <div className="row">
-        <img src={cloth} alt="cloth" />
-        <img src={bowls} alt="bowls" />
-        <img src={silverware1} alt="silverware1" />
-        <img src={silverware2} alt="silverware2" />
-        <img src={silverware3} alt="silverware3" />
+        <img src={cloth} alt="cloth" loading="lazy" />
+        <img src={bowls} alt="bowls" loading="lazy" />
+        <img src={silverware1} alt="silverware1" loading="lazy" />
+        <img src={silverware2} alt="silverware2" loading="lazy" />
+        <img src={silverware3} alt="silverware3" loading="lazy" />
       </div>
       <div className="row">
-        <img src={handOutline} alt="handOutline" />
-        <img src={skeleton1} alt="skeleton1" />
-        <img src={skeleton2} alt="skeleton2" />
-        <img src={skeleton3} alt="skeleton3" />
+        <img src={handOutline} alt="handOutline" loading="lazy" />
+        <img src={skeleton1} alt="skeleton1" loading="lazy" />
+        <img src={skeleton2} alt="skeleton2" loading="lazy" />
+        <img src={skeleton3} alt="skeleton3" loading="lazy" />
       </div>
       <div className="row">
-        <img src={trombone} alt="trombone" />
-        <img src={bailey} alt="bailey" />
-        <img src={bellows} alt="bellows" />
+        <img src={trombone} alt="trombone" loading="lazy" />
+        <img src={bailey} alt="bailey" loading="lazy" />
+        <img src={bellows} alt="bellows" loading="lazy" />
       </div>
       <div className="row">
-        <img src={bird} alt="bird" />
-        <img src={tunnel} alt="tunnel" />
-        <img src={creature} alt="creature" />
+        <img src={bird} alt="bird" loading="lazy" />
+        <img src={tunnel} alt="tunnel" loading="lazy" />
+        <img src={creature} alt="creature" loading="lazy" />
       </div>
     </div>
   );

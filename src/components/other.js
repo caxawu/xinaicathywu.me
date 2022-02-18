@@ -12,7 +12,7 @@ import chefsKiss from '../img/other-works/chefsKiss.png';
 
 const GameDesignStudio = (props) => {
   return (
-    <div className="section">
+    <div className="other-section">
       <div className="top-header">
         <div className="title">
           Game Design Studio (FILM 51)
@@ -23,7 +23,7 @@ const GameDesignStudio = (props) => {
       </div>
       <div className="body">
         <div className="item">
-          <img src={beyond} alt="beyond" />
+          <img src={beyond} alt="beyond" loading="lazy" />
           <div className="description">
             <div className="name">
               Beyond
@@ -45,7 +45,7 @@ const GameDesignStudio = (props) => {
           </div>
         </div>
         <div className="item">
-          <img src={journey} alt="journey" />
+          <img src={journey} alt="journey" loading="lazy" />
           <div className="description">
             <div className="name">
               Journey
@@ -64,7 +64,7 @@ const GameDesignStudio = (props) => {
           </div>
         </div>
         <div className="item">
-          <img src={storyteller} alt="storyteller" />
+          <img src={storyteller} alt="storyteller" loading="lazy" />
           <div className="description">
             <div className="name">
               Storyteller
@@ -89,7 +89,7 @@ const GameDesignStudio = (props) => {
 
 const FullStackWebDev = (props) => {
   return (
-    <div className="section">
+    <div className="other-section">
       <div className="top-header">
         <div className="title">
           Full-Stack Web Development (COSC 52)
@@ -100,13 +100,13 @@ const FullStackWebDev = (props) => {
       </div>
       <div className="body">
         <div className="item">
-          <img src={stickies} alt="stickies" />
+          <img src={stickies} alt="stickies" loading="lazy" />
           <div className="description">
             <div className="name">
               Stickies
             </div>
             <div className="description1">
-              Capture your thoughts and share them with others on this collaborative post-it notes board.
+              Capture your thoughts and share them on this collaborative post-it notes board.
             </div>
             <div className="description2">
               A real-time collaborative post-it note app that supports markdown notation.
@@ -119,7 +119,7 @@ const FullStackWebDev = (props) => {
           </div>
         </div>
         <div className="item">
-          <img src={buzzfeed} alt="buzzfeed" />
+          <img src={buzzfeed} alt="buzzfeed" loading="lazy" />
           <div className="description">
             <div className="name">
               Buzzfeed Quiz
@@ -138,7 +138,7 @@ const FullStackWebDev = (props) => {
           </div>
         </div>
         <div className="item">
-          <img src={adventures} alt="adventures" />
+          <img src={adventures} alt="adventures" loading="lazy" />
           <div className="description">
             <div className="name">
               Track Your Adventures
@@ -163,7 +163,7 @@ const FullStackWebDev = (props) => {
 
 const UIPractice = (props) => {
   return (
-    <div className="section">
+    <div className="other-section">
       <div className="top-header">
         <div className="title">
           UI Practice
@@ -174,7 +174,7 @@ const UIPractice = (props) => {
       </div>
       <div className="body">
         <div className="item">
-          <img src={chefsKiss} alt="chefsKiss" />
+          <img src={chefsKiss} alt="chefsKiss" loading="lazy" />
           <div className="description">
             <div className="name">
               Chef&apos;s Kiss
