@@ -72,7 +72,11 @@ const Header = () => {
     <Router>
       <NavLink exact to="/"><div className="logo" /></NavLink>
       <div className="header">
-        <div className="logo">Xinai (Cathy) Wu</div>
+        <div className="logo">
+          <a href="https://xinaicathywu.me/" rel="noreferrer">
+            Xinai (Cathy) Wu
+          </a>
+        </div>
         <div className="nav">
           <Nav />
         </div>

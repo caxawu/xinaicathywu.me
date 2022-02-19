@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
+import FadeIn from 'react-fade-in';
+
 import beyond from '../img/other-works/beyond.png';
 import journey from '../img/other-works/journey.png';
 import storyteller from '../img/other-works/storyteller.png';
@@ -201,9 +203,11 @@ const Other = (props) => {
   return (
     <div className="content">
       <div className="spacer" />
-      <GameDesignStudio />
-      <FullStackWebDev />
-      <UIPractice />
+      <FadeIn>
+        <GameDesignStudio />
+        <FullStackWebDev />
+        <UIPractice />
+      </FadeIn>
     </div>
   );
 };

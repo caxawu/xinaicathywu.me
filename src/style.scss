@@ -1,4 +1,5 @@
 $dropshadow: 0px 0px 16px 0px rgba(89, 89, 89, 0.25);
+$dropshadow-hover: 0px 0px 20px 0px rgba(89, 89, 89, 0.50);
 $dropshadow-light: 0px 0px 16px rgba(168, 168, 168, 0.25);
 
 
@@ -14,7 +15,7 @@ body, html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 2vh 12vw;
+  padding: 1.5em 12vw;
   background: #FFFFFF;
   box-shadow: $dropshadow;
   overflow: hidden;
@@ -22,6 +23,9 @@ body, html {
     display: inherit;
     align-items: center;
     font-size: 1.5em;
+    a, a:active, a:visited {
+      text-decoration: none;
+    }
   }
   .nav {
     ul {
@@ -45,7 +49,7 @@ body, html {
 .content {
   margin: 0 8%;
   .secondary-nav {
-    margin: 2.5em;
+    margin: 3em;
     margin-bottom: 1.5em;
     ul {
       display: flex;
@@ -104,8 +108,8 @@ body, html {
       display: inherit;
       flex-direction: row;
       justify-content: space-between;
-      padding: 1.5em 2vw;
-      padding-bottom: 1em;
+      padding: 2em 2vw;
+      padding-bottom: 1.5em;
       .title {
         font-weight: bold;
       }      
@@ -119,7 +123,7 @@ body, html {
       .item {
         display: flex;
         flex-direction: column;
-        width: 17.5vw;
+        width: 16.5vw;
         img {
           display: block;
           object-fit: cover;
@@ -163,48 +167,56 @@ body, html {
       flex-direction: column;
       width: 19vw;
       box-shadow: $dropshadow;
-
-      img {
-        display: block;
-        object-fit: cover;
-        max-height: 100%;
-      }
-      .description {
-        display: flex;
+      a {
+        display: inherit;
         flex-direction: column;
-        justify-content: space-between;
+        text-decoration: none;
         height: 100%;
-        padding: 1em;
-        .text {
-          padding-bottom: 1em;
+        img {
+          display: block;
+          object-fit: cover;
+          max-height: 100%;
         }
-        .tags {
-          display: inherit;
-          flex-direction: row;
+        .description {
+          display: flex;
+          flex-direction: column;
           justify-content: space-between;
-          align-items: flex-end;
           height: 100%;
-          ul {
+          padding: 1em;
+          .text {
+            padding-bottom: 1em;
+          }
+          .tags {
             display: inherit;
-            flex-direction: column;
-            justify-content: center;
-            list-style-type: none;
-            margin: 0;
-            padding: 0; 
-            li {
-              color: #838383;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 100%;
+            ul {
+              display: inherit;
+              flex-direction: column;
+              justify-content: center;
+              list-style-type: none;
+              margin: 0;
+              padding: 0; 
+              li {
+                color: #838383;
+              }
+            }
+            #left {
+              text-align: left;
+            }
+            #right {
+              text-align: right;
             }
           }
-          #left {
-            text-align: left;
-          }
-          #right {
-            text-align: right;
-          }
         }
       }
-      }
 
+      }
+    .card:hover {
+      box-shadow: $dropshadow-hover;
+    }
   }
 }
 
@@ -213,4 +225,34 @@ body, html {
   border-bottom-style:solid;
   border-bottom-width: 2px;
   border-color: #787878;
+}
+
+// 1080 screens
+@media only screen and (max-width: 2100px) {
+  body, html {
+    color: #3700ff;
+  }
+  .content {
+    .secondary-nav {
+      margin: 2.5em;
+      margin-bottom: 1.5em;
+    }
+    .other-section {
+      .top-header {
+        padding: 1.5em 2vw;
+        padding-bottom: 1em;   
+      }
+    }
+  }
+}
+
+// mobile screens
+@media only screen and (max-width: 768px) {
+  body, html {
+    font-family: "Raleway", "Roboto", sans-serif;
+    background-color: #FAFAFA;
+    font-size: 16px;
+    margin: 0;
+    color: #ff0000;
+  }
 }

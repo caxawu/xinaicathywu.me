@@ -1,5 +1,7 @@
 import React from 'react';
 import '../style.scss';
+import FadeIn from 'react-fade-in';
+
 import diorama1 from '../img/digital-art/diorama1.png';
 import diorama2 from '../img/digital-art/diorama2.png';
 import boatRender from '../img/digital-art/boatRender.png';
@@ -55,21 +57,23 @@ import creature from '../img/drawings/creature.png';
 const Digital = (props) => {
   return (
     <div className="img-section">
-      <div className="row">
-        <img src={diorama1} alt="Diorama 1" loading="lazy" />
-        <img src={diorama2} alt="Diorama 2" loading="lazy" />
-        <img src={boatRender} alt="boatRender" loading="lazy" />
-      </div>
-      <div className="row">
-        <img src={dioramaWIP} alt="dioramaWIP" loading="lazy" />
-        <img src={boatWIP} alt="boatWIP" loading="lazy" />
-        <img src={plant} alt="plant" loading="lazy" />
-      </div>
-      <div className="row">
-        <img src={room} alt="room" loading="lazy" />
-        <img src={juice} alt="juice" loading="lazy" />
-        <img src={escher} alt="escher" loading="lazy" />
-      </div>
+      <FadeIn>
+        <div className="row">
+          <img src={diorama1} alt="Diorama 1" loading="eager" />
+          <img src={diorama2} alt="Diorama 2" loading="eager" />
+          <img src={boatRender} alt="boatRender" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={dioramaWIP} alt="dioramaWIP" loading="eager" />
+          <img src={boatWIP} alt="boatWIP" loading="eager" />
+          <img src={plant} alt="plant" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={room} alt="room" loading="eager" />
+          <img src={juice} alt="juice" loading="eager" />
+          <img src={escher} alt="escher" loading="eager" />
+        </div>
+      </FadeIn>
     </div>
   );
 };
@@ -77,25 +81,27 @@ const Digital = (props) => {
 const Paintings = (props) => {
   return (
     <div className="img-section">
-      <div className="row">
-        <img src={umbrella} alt="umbrella" loading="lazy" />
-        <img src={birds} alt="birds" loading="lazy" />
-        <img src={fence} alt="fence" loading="lazy" />
-      </div>
-      <div className="row">
-        <img src={abstract} alt="abstract" loading="lazy" />
-        <img src={world} alt="world" loading="lazy" />
-        <img src={landscape} alt="landscape" loading="lazy" />
-      </div>
-      <div className="row">
-        <img src={tuckDrive} alt="tuckDrive" loading="lazy" />
-        <img src={dragon} alt="dragon" loading="lazy" />
-      </div>
-      <div className="row">
-        <img src={ghosts} alt="ghosts" loading="lazy" />
-        <img src={door} alt="door" loading="lazy" />
-        <img src={metal} alt="metal" loading="lazy" />
-      </div>
+      <FadeIn>
+        <div className="row">
+          <img src={umbrella} alt="umbrella" loading="eager" />
+          <img src={birds} alt="birds" loading="eager" />
+          <img src={fence} alt="fence" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={abstract} alt="abstract" loading="eager" />
+          <img src={world} alt="world" loading="eager" />
+          <img src={landscape} alt="landscape" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={tuckDrive} alt="tuckDrive" loading="eager" />
+          <img src={dragon} alt="dragon" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={ghosts} alt="ghosts" loading="eager" />
+          <img src={door} alt="door" loading="eager" />
+          <img src={metal} alt="metal" loading="eager" />
+        </div>
+      </FadeIn>
     </div>
   );
 };
@@ -103,49 +109,51 @@ const Paintings = (props) => {
 const Drawings = (props) => {
   return (
     <div className="img-section">
-      <div className="row">
-        <img src={fruit1} alt="fruit1" loading="lazy" />
-        <img src={fruit2} alt="fruit2" loading="lazy" />
-        <img src={fruit3} alt="fruit4" loading="lazy" />
-        <img src={fruit4} alt="fruit4" loading="lazy" />
-      </div>
-      <div className="row">
-        <img src={hand1} alt="hand1" loading="lazy" />
-        <img src={hand2} alt="hand2" loading="lazy" />
-        <img src={hand3} alt="hand3" loading="lazy" />
-        <img src={hand4} alt="hand4" loading="lazy" />
-        <img src={hand5} alt="hand5" loading="lazy" />
-      </div>
-      <div className="row">
-        <img src={bike1} alt="bike1" loading="lazy" />
-        <img src={bike2} alt="bike2" loading="lazy" />
-        <img src={bike3} alt="bike3" loading="lazy" />
-        <img src={bike4} alt="bike4" loading="lazy" />
-        <img src={bike5} alt="bike5" loading="lazy" />
-      </div>
-      <div className="row">
-        <img src={cloth} alt="cloth" loading="lazy" />
-        <img src={bowls} alt="bowls" loading="lazy" />
-        <img src={silverware1} alt="silverware1" loading="lazy" />
-        <img src={silverware2} alt="silverware2" loading="lazy" />
-        <img src={silverware3} alt="silverware3" loading="lazy" />
-      </div>
-      <div className="row">
-        <img src={handOutline} alt="handOutline" loading="lazy" />
-        <img src={skeleton1} alt="skeleton1" loading="lazy" />
-        <img src={skeleton2} alt="skeleton2" loading="lazy" />
-        <img src={skeleton3} alt="skeleton3" loading="lazy" />
-      </div>
-      <div className="row">
-        <img src={trombone} alt="trombone" loading="lazy" />
-        <img src={bailey} alt="bailey" loading="lazy" />
-        <img src={bellows} alt="bellows" loading="lazy" />
-      </div>
-      <div className="row">
-        <img src={bird} alt="bird" loading="lazy" />
-        <img src={tunnel} alt="tunnel" loading="lazy" />
-        <img src={creature} alt="creature" loading="lazy" />
-      </div>
+      <FadeIn>
+        <div className="row">
+          <img src={fruit1} alt="fruit1" loading="eager" />
+          <img src={fruit2} alt="fruit2" loading="eager" />
+          <img src={fruit3} alt="fruit4" loading="eager" />
+          <img src={fruit4} alt="fruit4" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={hand1} alt="hand1" loading="eager" />
+          <img src={hand2} alt="hand2" loading="eager" />
+          <img src={hand3} alt="hand3" loading="eager" />
+          <img src={hand4} alt="hand4" loading="eager" />
+          <img src={hand5} alt="hand5" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={bike1} alt="bike1" loading="eager" />
+          <img src={bike2} alt="bike2" loading="eager" />
+          <img src={bike3} alt="bike3" loading="eager" />
+          <img src={bike4} alt="bike4" loading="eager" />
+          <img src={bike5} alt="bike5" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={cloth} alt="cloth" loading="eager" />
+          <img src={bowls} alt="bowls" loading="eager" />
+          <img src={silverware1} alt="silverware1" loading="eager" />
+          <img src={silverware2} alt="silverware2" loading="eager" />
+          <img src={silverware3} alt="silverware3" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={handOutline} alt="handOutline" loading="eager" />
+          <img src={skeleton1} alt="skeleton1" loading="eager" />
+          <img src={skeleton2} alt="skeleton2" loading="eager" />
+          <img src={skeleton3} alt="skeleton3" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={trombone} alt="trombone" loading="eager" />
+          <img src={bailey} alt="bailey" loading="eager" />
+          <img src={bellows} alt="bellows" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={bird} alt="bird" loading="eager" />
+          <img src={tunnel} alt="tunnel" loading="eager" />
+          <img src={creature} alt="creature" loading="eager" />
+        </div>
+      </FadeIn>
     </div>
   );
 };
