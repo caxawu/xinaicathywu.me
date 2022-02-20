@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import FadeIn from 'react-fade-in';
 
 import Footer from './footer';
@@ -15,6 +16,10 @@ import adventures from '../img/other-works/adventures.png';
 import chefsKiss from '../img/other-works/chefsKiss.png';
 
 const GameDesignStudio = (props) => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <div className="other-section">
       <div className="top-header">

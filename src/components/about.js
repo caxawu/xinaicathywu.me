@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import FadeIn from 'react-fade-in';
 import Typing from 'react-typing-animation';
 
@@ -16,6 +17,10 @@ class About extends Component {
       wordPause: 1500,
       deletePause: 250,
     };
+  }
+
+  componentDidMount() {
+    ReactGA.pageview(window.location.pathname);
   }
 
   startLoop = () => {

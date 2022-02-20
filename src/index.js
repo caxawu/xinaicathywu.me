@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './style.scss';
+import ReactGA from 'react-ga';
 import Header from './components/header';
 
 class App extends Component {
@@ -10,9 +11,9 @@ class App extends Component {
 
     this.state = {
     };
-  }
 
-  componentDidMount() {
+    ReactGA.initialize('G-5YGCMP79VW');
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   render() {

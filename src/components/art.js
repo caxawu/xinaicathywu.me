@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import '../style.scss';
 import FadeIn from 'react-fade-in';
 
@@ -55,6 +56,10 @@ import tunnel from '../img/drawings/tunnel.png';
 import creature from '../img/drawings/creature.png';
 
 const Digital = (props) => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <div className="img-section">
       <FadeIn>

@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import FadeIn from 'react-fade-in';
 
 import Footer from './footer';
@@ -12,6 +13,10 @@ import spaces from '../img/portfolio/spaces-temp.png';
 import spot from '../img/portfolio/spot-temp.png';
 
 const Portfolio = (props) => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <div className="content">
       <FadeIn>
