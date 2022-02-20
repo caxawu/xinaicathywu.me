@@ -2,6 +2,8 @@
 import React from 'react';
 import FadeIn from 'react-fade-in';
 
+import Footer from './footer';
+
 import beyond from '../img/other-works/beyond.png';
 import journey from '../img/other-works/journey.png';
 import storyteller from '../img/other-works/storyteller.png';
@@ -208,6 +210,7 @@ const Other = (props) => {
         <FullStackWebDev />
         <UIPractice />
       </FadeIn>
+      <Footer />
     </div>
   );
 };

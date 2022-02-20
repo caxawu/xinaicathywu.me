@@ -1,7 +1,7 @@
 $dropshadow: 0px 0px 16px 0px rgba(89, 89, 89, 0.25);
 $dropshadow-hover: 0px 0px 20px 0px rgba(89, 89, 89, 0.50);
 $dropshadow-light: 0px 0px 16px rgba(168, 168, 168, 0.25);
-
+$highlight-pink: #EADCE0;
 
 body, html {
     font-family: "Raleway", "Roboto", sans-serif;
@@ -44,6 +44,55 @@ body, html {
       }
     }
   }
+}
+
+.icons {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+    a {
+      display: flex;
+      font-family: inherit;
+      font-size: inherit;
+      text-decoration: none;
+      color: inherit;
+      width: 64px;
+      height: 64px;
+      transition: width 1s;
+      img {
+        width: 64px;
+        height: 64px;
+      }
+      #text {
+        display: inherit;
+        font-family: inherit;
+        font-size: 1.5em;
+        color: white;
+        align-self: center;
+        padding-left: 12px;
+      }
+    }
+    #linkedin {
+      background-color: #28588F;
+    }
+    #linkedin:hover {
+      width: 180px;
+    }
+    #mail {
+      background-color: #89B5DA;
+    }
+    #mail:hover {
+      width: 145px;
+    }
+    #resume {
+      background-color: #639898;
+    }
+    #resume:hover {
+      width: 175px;
+    }
 }
 
 .content {
@@ -185,6 +234,7 @@ body, html {
           padding: 1em;
           .text {
             padding-bottom: 1em;
+            color: #262626;
           }
           .tags {
             display: inherit;
@@ -212,10 +262,101 @@ body, html {
           }
         }
       }
-
-      }
+    }
     .card:hover {
       box-shadow: $dropshadow-hover;
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 3.5em;
+    padding-bottom: 2em;
+    #heart {
+      color: #91689B;
+    }
+  }
+}
+
+.top-container {
+  display: flex;
+  flex-direction: row;
+  padding: 12em 10em;
+  img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .text {
+    display: inherit;
+    flex-direction: column;
+    padding-top: 12em;
+    padding-left: 8vw;
+    h1 {
+      font-size: 3em;
+      font-weight: 300;
+      margin-bottom: 0;
+    }
+    h2 {
+      font-size: 2em;
+      font-weight: 300;
+    }
+  }
+}
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 18vh 16vw;
+  margin-bottom: 6vh;
+
+  img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    margin: auto;
+    padding-bottom: 4em;
+  }
+  .text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .box {
+      border: 2px solid $highlight-pink;
+      width: 46vw;
+      margin-right: 2vw;
+      padding: 1.5em;
+      .title {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+        background: linear-gradient(180deg,rgba(255,255,255,0) 50%, $highlight-pink 50%);
+        width: fit-content;
+      }
+      .body {
+        .subheading {
+          font-weight: 600;
+          padding-bottom: 0.25em;
+        }
+        ul {
+          display: inherit;
+          flex-direction: column;
+          justify-content: center;
+          list-style-type: none;
+          margin: 0;
+          padding: 0; 
+          padding-bottom: 1em;
+          li {
+            padding: 0.25em 0;
+          }
+        }
+      }
+    }
+    .bio {
+      padding-top: 2em;
+      line-height: 1.5;
+      font-size: 1.1em;
     }
   }
 }
@@ -224,13 +365,13 @@ body, html {
   padding-bottom: 4px;
   border-bottom-style:solid;
   border-bottom-width: 2px;
-  border-color: #787878;
 }
 
 // 1080 screens
 @media only screen and (max-width: 2100px) {
   body, html {
-    color: #3700ff;
+    // color: #3700ff;
+    font-size: 15px;
   }
   .content {
     .secondary-nav {
@@ -238,9 +379,51 @@ body, html {
       margin-bottom: 1.5em;
     }
     .other-section {
+      margin: 0 9vw;
+      margin-bottom: 2em;
       .top-header {
-        padding: 1.5em 2vw;
-        padding-bottom: 1em;   
+        padding: 1.75em 1vw;
+        padding-bottom: 1.25em;   
+      }
+      .body {
+        padding: 0 1vw;
+        padding-bottom: 2vh;
+        .item {
+          width: 19.5vw;
+          img {
+            margin-bottom: 2vh;
+          }
+          .description {
+            .name {
+              margin-bottom: 1vh;
+            }
+          }
+        }
+      }
+    }
+    .portfolio-row {
+      margin: 0 9vw;
+      .card {
+        width: 21vw;
+      }
+    }
+    .top-container {
+      padding: 10em 8em;
+      .text {
+        padding-top: 10em;
+        padding-left: 8vw;
+      }
+    }
+    .bottom-container {
+      margin: 14vh 10vw;
+      margin-bottom: 0;
+      img {
+        width: 50%;
+      }
+      .text {
+        .box {
+          width: 60vw;
+        }
       }
     }
   }

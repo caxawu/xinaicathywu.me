@@ -1,12 +1,15 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import FadeIn from 'react-fade-in';
 
+import Footer from './footer';
+
 import roomSearch from '../img/portfolio/roomSearch.png';
-import lending from '../img/portfolio/lending.png';
+import lending from '../img/portfolio/lending-temp.png';
 import artrek from '../img/portfolio/artrek.png';
 import anivision from '../img/portfolio/anivision.png';
-import spaces from '../img/portfolio/spaces.png';
-import spot from '../img/portfolio/spot.png';
+import spaces from '../img/portfolio/spaces-temp.png';
+import spot from '../img/portfolio/spot-temp.png';
 
 const Portfolio = (props) => {
   return (
@@ -39,7 +42,7 @@ const Portfolio = (props) => {
             </a>
           </div>
           <div className="card">
-            <a href="https://docs.google.com/presentation/d/1oQKbHJpGnIfVUPFwohTbwj-nYtcfMaSjgIJReMY9gRM/edit?usp=sharing" target="_blank" rel="noreferrer">
+            <a href="#" rel="noreferrer">
               <img src={lending} alt="Smartphone Lending" loading="eager" />
               <div className="description">
                 <div className="text">
@@ -106,7 +109,7 @@ const Portfolio = (props) => {
             </a>
           </div>
           <div className="card">
-            <a href="https://docs.google.com/presentation/d/1oQKbHJpGnIfVUPFwohTbwj-nYtcfMaSjgIJReMY9gRM/edit?usp=sharing" target="_blank" rel="noreferrer">
+            <a href="#" rel="noreferrer">
               <img src={spaces} alt="Spaces" loading="eager" />
               <div className="description">
                 <div className="text">
@@ -124,7 +127,7 @@ const Portfolio = (props) => {
             </a>
           </div>
           <div className="card">
-            <a href="https://docs.google.com/presentation/d/1oQKbHJpGnIfVUPFwohTbwj-nYtcfMaSjgIJReMY9gRM/edit?usp=sharing" target="_blank" rel="noreferrer">
+            <a href="#" rel="noreferrer">
               <img src={spot} alt="Spot-the-Difference" loading="eager" />
               <div className="description">
                 <div className="text">
@@ -144,6 +147,7 @@ const Portfolio = (props) => {
           </div>
         </div>
       </FadeIn>
+      <Footer />
     </div>
   );
 };
