@@ -11,10 +11,16 @@ class App extends Component {
 
     this.state = {
     };
+  }
 
+  componentDidMount() {
+    this.setGA();
+  }
+
+  setGA = () => {
     ReactGA.initialize('G-5YGCMP79VW');
     ReactGA.pageview(window.location.pathname + window.location.search);
-  }
+  };
 
   render() {
     return (

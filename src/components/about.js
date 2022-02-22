@@ -66,7 +66,7 @@ class About extends Component {
 
                   <Typing.Backspace count={16} />
                   <Typing.Reset count={0} delay={100} />
-                </Typing>
+                </Typing>&nbsp;
               </h2>
             </div>
           </div>
