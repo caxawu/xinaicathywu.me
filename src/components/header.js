@@ -1,8 +1,8 @@
-// import React, { Component } from 'react';
 import React from 'react';
 import {
   BrowserRouter as Router, Routes, Route, NavLink,
 } from 'react-router-dom';
+import ReactGA from 'react-ga';
 import '../style.scss';
 import About from './about';
 import Other from './other';
@@ -15,6 +15,8 @@ import Footer from './footer';
 import linkedin from '../img/nav/linkedin.png';
 import mail from '../img/nav/mail.png';
 import resume from '../img/nav/resume.png';
+
+ReactGA.initialize('G-5YGCMP79VW');
 
 const Nav = (props) => {
   return (

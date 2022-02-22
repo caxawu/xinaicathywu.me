@@ -20,6 +20,7 @@ class About extends Component {
   }
 
   componentDidMount() {
+    console.log('page=>', window.location.pathname);
     ReactGA.pageview(window.location.pathname);
   }
 
@@ -66,7 +67,8 @@ class About extends Component {
 
                   <Typing.Backspace count={16} />
                   <Typing.Reset count={0} delay={100} />
-                </Typing>&nbsp;
+                </Typing>
+                &nbsp;
               </h2>
             </div>
           </div>

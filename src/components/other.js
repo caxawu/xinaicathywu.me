@@ -18,6 +18,7 @@ import chefsKiss from '../img/other-works/chefsKiss.png';
 const GameDesignStudio = (props) => {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
+    console.log('page=>', window.location.pathname);
   }, []);
 
   return (

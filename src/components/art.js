@@ -58,6 +58,7 @@ import creature from '../img/drawings/creature.png';
 const Digital = (props) => {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
+    console.log('page=>', window.location.pathname);
   }, []);
 
   return (
@@ -84,6 +85,11 @@ const Digital = (props) => {
 };
 
 const Paintings = (props) => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+    console.log('page=>', window.location.pathname);
+  }, []);
+
   return (
     <div className="img-section">
       <FadeIn>
@@ -112,6 +118,11 @@ const Paintings = (props) => {
 };
 
 const Drawings = (props) => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+    console.log('page=>', window.location.pathname);
+  }, []);
+
   return (
     <div className="img-section">
       <FadeIn>

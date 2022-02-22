@@ -15,6 +15,7 @@ import spot from '../img/portfolio/spot-temp.png';
 const Portfolio = (props) => {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
+    console.log('page=>', window.location.pathname);
   }, []);
 
   return (
