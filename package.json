@@ -62,6 +62,7 @@
     "react-draggable": "^4.4.3",
     "react-fade-in": "^2.0.1",
     "react-ga": "^3.3.0",
+    "react-ga4": "^1.4.1",
     "react-icons": "^4.2.0",
     "react-markdown": "^6.0.1",
     "react-router": "^5.2.0",

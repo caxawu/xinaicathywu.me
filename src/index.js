@@ -17,7 +17,7 @@ import linkedin from './img/nav/linkedin.png';
 import mail from './img/nav/mail.png';
 import resume from './img/nav/resume.png';
 
-ReactGA.initialize('G-5YGCMP79VW');
+ReactGA.initialize('UA-155129215-2');
 
 const Nav = (props) => {
   return (

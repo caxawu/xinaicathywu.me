@@ -134,7 +134,7 @@ body, html {
       justify-content: center;
       img {
         width: auto;
-        max-height: auto;
+        // height: auto;
         object-fit: cover;
         overflow: hidden;
         padding: 0 0.25vw;
@@ -177,7 +177,7 @@ body, html {
         img {
           display: block;
           object-fit: cover;
-          max-height: auto;
+          height: auto;
           box-shadow: $dropshadow-light;
           margin-bottom: 1vh;
         }
@@ -225,7 +225,7 @@ body, html {
         img {
           display: block;
           object-fit: cover;
-          max-height: auto;
+          height: auto;
         }
         .description {
           display: flex;
