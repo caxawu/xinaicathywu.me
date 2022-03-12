@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router, Routes, Route, NavLink,
@@ -8,6 +8,10 @@ import './style.scss';
 import About from './components/about';
 import Other from './components/other';
 import Portfolio from './components/portfolio';
+import PortfolioLending from './components/portfolioLending';
+import PortfolioSpaces from './components/portfolioSpaces';
+import PortfolioSpot from './components/portfolioSpot';
+import PortfolioBurnout from './components/portfolioBurnout';
 import {
   Digital, Paintings, Drawings,
 } from './components/art';
@@ -77,6 +81,38 @@ const DrawingsPage = (props) => {
     </div>
   );
 };
+const Scroll = () => {
+  // The back-to-top button is hidden at the beginning
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    });
+  }, []);
+
+  // This function will scroll the window to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // for smoothly scrolling
+    });
+  };
+
+  return (
+    <>
+      {showButton && (
+        <button type="button" onClick={scrollToTop} className="back-to-top">
+          <div className="up-arrow" />
+        </button>
+      )}
+    </>
+  );
+};
 
 class App extends Component {
   constructor(props) {
@@ -114,9 +150,16 @@ class App extends Component {
             <span id="text">resume</span>
           </a>
         </div>
+        <Scroll />
         <Routes>
           <Route exact path="/" element={<About />} />
+
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio/smartphone-lending" element={<PortfolioLending />} />
+          <Route path="/portfolio/spaces" element={<PortfolioSpaces />} />
+          <Route path="/portfolio/spot-the-difference" element={<PortfolioSpot />} />
+          <Route path="/portfolio/clinician-burnout" element={<PortfolioBurnout />} />
+
           <Route path="/other-works" element={<Other />} />
           <Route path="/art/digital-art" element={<DigitalPage />} />
           <Route path="/art/paintings" element={<PaintingsPage />} />

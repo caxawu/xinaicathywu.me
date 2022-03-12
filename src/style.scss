@@ -2,13 +2,22 @@ $dropshadow: 0px 0px 16px 0px rgba(89, 89, 89, 0.25);
 $dropshadow-hover: 0px 0px 20px 0px rgba(89, 89, 89, 0.50);
 $dropshadow-light: 0px 0px 16px rgba(168, 168, 168, 0.25);
 $highlight-pink: #EADCE0;
+$lending-teal: #6D8C8E;
+$lending-light-teal: #C9DDDE;
+$escher-purple: #5A3CB2;
+$escher-light-purple: #65659F;
+$spot-bluegray: #84959F;
+$spot-green: #246e1d;
+
 
 body, html {
     font-family: "Raleway", "Roboto", sans-serif;
+    font-weight: 500;
     background-color: #FAFAFA;
     font-size: 16px;
     margin: 0;
     color: #262626;
+    scroll-behavior: smooth;
   }
 
 .header {
@@ -96,6 +105,31 @@ body, html {
     }
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 48px;
+  right: 48px;
+  width: 64px;
+  height: 64px;
+  background: white;
+  cursor: pointer;
+  border-radius: 100px;
+  border: none;
+  box-shadow:$dropshadow;
+  transform: rotate(-135deg);
+  .up-arrow {
+    border: solid #262626;
+    border-width: 0 4px 4px 0;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 12px;
+    transform: translate(-4px, -4px);
+    -webkit-transform: translate(-4px, -4px);
+  }
+}
+.back-to-top:hover {
+  box-shadow:$dropshadow-hover;
+}
 .content {
   margin: 0 8%;
   .secondary-nav {
@@ -268,6 +302,171 @@ body, html {
       box-shadow: $dropshadow-hover;
     }
   }
+  .top-card {
+    background-size: contain;
+    background-repeat:no-repeat;
+    height: 32.4em;
+    margin: 2em 12vw;
+    .text {
+      width: 36%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 3em;
+      padding-top: 12%;
+      .title {
+        font-size: 2em;
+        padding-bottom: 8px;
+      }
+      .role {
+        padding-bottom: 16px;
+        font-weight: 400;
+      }
+      .headline {
+        padding-bottom: 24px;
+        font-weight: 500;
+      }
+      a {
+        text-decoration: none;
+        width: fit-content;
+        font-weight: 600;
+        color: #262626;
+        padding: 0.5em;
+        border: 1.5px solid #262626;
+        border-radius: 5px;
+      }
+      .white-button {
+        color: white;
+        border: 1.5px solid white;
+      }
+    }
+    #text-white {
+      color: white;
+    }
+  }
+  #lending-top-background {
+    background-image: url(./img/portfolio/lending/topBackground.png);
+  }
+  #spaces-top-background {
+    background-image: url(./img/portfolio/spaces/spacesTopBackground.png);
+  }
+  #spot-top-background {
+    background-image: url(./img/portfolio/spot/spotTopBackground.png);
+  }
+  #burnout-top-background {
+    background-image: url(./img/portfolio/burnout/burnoutTopBackground.png);
+  }
+  .secondary-info {
+    display: flex;
+    flex-direction: row;
+    margin: 2em 20vw;
+    margin-bottom: -1.1em;
+    justify-content: center;
+    border-top: 1px solid #7B7B7B;
+    border-bottom: 1px solid #7B7B7B;
+    .list {
+      padding: 1.5em 4em;
+      padding-bottom: 2.5em;
+      text-align: center;
+      #title {
+        font-weight: 700;
+      }
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+  .jump-button {
+    display: flex;
+    margin: auto;
+    margin-bottom: 6em;
+    text-decoration: none;
+    width: fit-content;
+    font-weight: 600;
+    color: #262626;
+    background-color: white;
+    padding: 0.5em 1em;
+    border: 1.5px solid #262626;
+    border-radius: 5px;
+  }
+  //color dependent on the case study page
+  #lending-button:hover {
+    box-shadow: $dropshadow-light;
+    background-color: $lending-teal;
+    color: white;
+  }
+  #spaces-button:hover {
+    box-shadow: $dropshadow-light;
+    background-color: $escher-light-purple;
+    color: white;
+  }
+  #spot-button:hover {
+    box-shadow: $dropshadow-light;
+    background-color: $spot-bluegray;
+    color: white;
+  }
+  .info-section {
+    margin: 0 12vw;
+    margin-bottom: 96px;
+    .section-title {
+      font-weight: 600;
+      margin-bottom: 16px;
+      width: 2em;
+      padding-top: 8px;
+    }
+    //color dependent on the case study page
+    #lending-color {
+      border-top: 3px solid $lending-teal;
+    }
+    #spaces-color {
+      border-top: 3px solid $escher-purple;
+    }
+    #spot-color {
+      border-top: 3px solid $spot-green;
+    }
+    //text styles
+    .text-block {
+      margin-bottom: 48px;
+      ul {
+        list-style-position: outside;
+        margin: 16px 0;
+        li {
+          margin-bottom: 8px;
+        }
+      }
+    }
+    .text-callout {
+      width: 70%;
+      margin: auto;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.5em;
+      margin-top: 72px;
+      margin-bottom: 96px;
+    }
+    //color dependent on the case study page
+    #lending-text {
+      color: $lending-teal;
+    }
+    #spaces-text {
+      color: $escher-purple;
+    }
+    #spot-text {
+      color: $spot-green;
+    }
+    img {
+      display: flex;
+      margin: auto;
+      margin-bottom: 72px;
+    }
+  }
+  #burnout-img {
+    display: flex;
+    margin: 4em auto;
+    width: 50%;
+  }
+
+
   .footer {
     display: flex;
     justify-content: center;
@@ -371,8 +570,8 @@ body, html {
 // 1080 screens
 @media only screen and (max-width: 2100px) {
   body, html {
-    // color: #3700ff;
     font-size: 15px;
+    font-weight: 400;
   }
   .content {
     .secondary-nav {
@@ -427,6 +626,130 @@ body, html {
         }
       }
     }
+    //case studies
+    .top-card {
+      margin: 2em 9vw;
+      height: 28.5em;
+      .text {
+        padding-top: 9.5%;
+        .role {
+          font-family: 300;
+        }
+        .headline {
+          font-weight: 400;
+        }
+      }
+    }
+    #spaces-top-background {
+      background-image: url(./img/portfolio/spaces/spacesTopBackground1080.png);
+    }
+    .secondary-info {
+      margin: 2em 17vw;
+      margin-bottom: -1.1em;
+      .list {
+        padding-bottom: 2em;
+      }
+    }
+    .info-section {
+      margin: 0 9vw;
+      margin-bottom: 96px;
+    }
+  }
+}
+// intermediate screens for case study spacing
+@media only screen and (max-width: 1500px) {
+  .content {
+    .top-card {
+      .text {
+        width: 38%;
+        padding-top: 6%;
+        padding-bottom: 0;
+        .title {
+          font-size: 1.5em;
+          padding-bottom: 8px;
+        }
+        .role {
+          font-family: 300;
+          font-size: 14px;
+        }
+        .headline {
+          font-family: 300;
+          font-size: 14px;
+        }
+      }
+    }
+    .secondary-info {
+      margin: -9em 9vw;
+      margin-bottom: -1.1em;
+      .list {
+        padding: 1.5em 2em;
+        padding-bottom: 2.5em;
+        text-align: center;
+      }
+    }
+    .info-section {
+      margin-bottom: 26px;
+      margin-right: 12vw;
+      .text-callout {
+        width: 90%;
+      }
+      iframe {
+        height: 40vh;
+      }
+    }
+  }
+}
+// intermediate screens for case study spacing
+@media only screen and (max-width: 1250px) {
+  .content {
+    .top-card {
+      margin: 2em 9vw;
+      height: auto;
+      .text {
+        padding: 0;
+        padding-top: 38%;
+        width: 95%;
+        .title {
+          font-size: 1.5em;
+        }
+        .role {
+          font-family: 300;
+        }
+        .headline {
+          font-weight: 400;
+          font-size: 14px;
+        }
+        a {
+          margin: auto;
+        }
+        .white-button {
+          color: #262626;
+          border: 1.5px solid #262626;
+        }
+      }
+      #text-white {
+        color: #262626;
+      }
+    }
+    .secondary-info {
+      margin: 0 9vw;
+      margin-bottom: -1.1em;
+      padding: 1em 0;
+      justify-content: space-between;
+      .list {
+        padding: 1em 0;
+      }
+    }
+    .info-section {
+      margin-bottom: 26px;
+      margin-right: 12vw;
+      .text-callout {
+        width: 90%;
+      }
+      iframe {
+        height: 25vh;
+      }
+    }
   }
 }
 
@@ -438,7 +761,18 @@ body, html {
     font-size: 14px;
     margin: 0;
   }
-  
+  .back-to-top {
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    .up-arrow {
+      border-width: 0 3px 3px 0;
+      padding: 8px;
+      transform: translate(-4px, -2px);
+    -webkit-transform: translate(-4px, -2px);
+    }
+  }
   .header {
     padding: 2em 0;
     padding-bottom: 0;
@@ -568,10 +902,70 @@ body, html {
         }
       }
     }
+
+    //case studies
+    .top-card {
+      margin: 2em 9vw;
+      height: auto;
+      .text {
+        padding: 0;
+        padding-top: 38%;
+        width: 95%;
+        .title {
+          font-size: 1.5em;
+        }
+        .role {
+          font-family: 300;
+        }
+        .headline {
+          font-weight: 400;
+          font-size: 14px;
+        }
+        a {
+          margin: auto;
+        }
+        .white-button {
+          color: #262626;
+          border: 1.5px solid #262626;
+        }
+      }
+      #text-white {
+        color: #262626;
+      }
+    }
+    #burnout-img {
+      display: flex;
+      margin: 4em auto;
+      width: 80%;
+    }
+    .secondary-info {
+      margin: 0 9vw;
+      margin-bottom: -1.1em;
+      padding: 1em 0;
+      flex-direction: column;
+      .list {
+        padding: 1em;
+      }
+    }
+    .jump-button {
+      margin-bottom: 4em;
+    }
+    .info-section {
+      margin-bottom: 26px;
+      margin-right: 12vw;
+      .text-callout {
+        width: 95%;
+        margin-top: 32px;
+        margin-bottom: 48px;
+      }
+      img {
+        width: 100%;
+      }
+      iframe {
+        height: 50%;
+      }
+    }
   }
-
-
-
   .active {
     padding-bottom: 2px;
   }

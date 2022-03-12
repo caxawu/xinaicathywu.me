@@ -154,7 +154,7 @@ const FullStackWebDev = (props) => {
               Track Your Adventures
             </div>
             <div className="description1">
-              Display your photos on digital poloroids attached to blinking string lights.
+              Display your photos on digital polaroids attached to blinking string lights.
             </div>
             <div className="description2">
               A CRUD-style content app that uses React, Redux and React-Router.

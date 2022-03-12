@@ -92,7 +92,8 @@ class About extends Component {
                     <li>em dashes</li>
                     <li>film soundtracks</li>
                     <li>the autumn 🍂</li>
-                    <li>desserts (both making and eating)</li>
+                    <li>baking</li>
+                    <li>desserts</li>
                   </ul>
                 </div>
               </div>
