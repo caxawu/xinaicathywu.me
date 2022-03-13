@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import FadeIn from 'react-fade-in';
 
 import Footer from './footer';
@@ -6,7 +7,20 @@ import Footer from './footer';
 import spot1 from '../img/portfolio/spot/spot1.png';
 import spot2 from '../img/portfolio/spot/spot2.png';
 
+const trackLinkClick = (category, action, label) => {
+  console.log('GA event:', category, ':', action, ':', label);
+  ReactGA.event({
+    category,
+    action,
+    label,
+ });
+};
+
 const PortfolioSpot = (props) => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+    console.log('page=>', window.location.pathname);
+  }, []);
     return (
       <FadeIn>
         <div className="content">
@@ -27,6 +41,7 @@ const PortfolioSpot = (props) => {
                 href="https://drive.google.com/file/d/1QCeNtvRbkLeDW_V3x3m3bzVwI5uii3H-/view?usp=sharing"
                 rel="noreferrer"
                 target="_blank"
+                onClick={trackLinkClick.bind(this, 'Portfolio/Spot', 'Spot apk Click', 'Portfolio Links')}
               >apk for Oculus Go
               </a>
             </div>
@@ -50,7 +65,13 @@ const PortfolioSpot = (props) => {
               <li>Unity</li>
             </ul>
           </ul>
-          <a id="spot-button" className="jump-button" href="#anchor" rel="noreferrer">Jump to prototype</a>
+          <a id="spot-button"
+            className="jump-button"
+            href="#anchor"
+            rel="noreferrer"
+            onClick={trackLinkClick.bind(this, 'Portfolio/Spot', 'Spot Jump Click', 'Portfolio Jump to Prototype')}
+          >Jump to prototype
+          </a>
           <div className="info-section">
             <div id="spot-color" className="section-title">ROLE</div>
             <div className="text-block">

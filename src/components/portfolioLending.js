@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import FadeIn from 'react-fade-in';
 
 import Footer from './footer';
@@ -19,7 +20,20 @@ import prototype5 from '../img/portfolio/lending/prototype5.png';
 import prototype6 from '../img/portfolio/lending/prototype6.png';
 import prototype7 from '../img/portfolio/lending/prototype7.png';
 
+const trackLinkClick = (category, action, label) => {
+  console.log('GA event:', category, ':', action, ':', label);
+  ReactGA.event({
+    category,
+    action,
+    label,
+ });
+};
+
 const PortfolioLending = (props) => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+    console.log('page=>', window.location.pathname);
+  }, []);
   return (
     <FadeIn>
       <div className="content">
@@ -36,7 +50,13 @@ const PortfolioLending = (props) => {
               How do people react in a situation where they are asked to share something as personal
               as their phone with someone else?
             </div>
-            <a id="lending-button" href="https://drive.google.com/file/d/1hO-qo3KsIsmagpA8XIz3EHspcn1SAP3g/view?usp=sharing" rel="noreferrer" target="_blank">Research Paper</a>
+            <a id="lending-button"
+              href="https://drive.google.com/file/d/1hO-qo3KsIsmagpA8XIz3EHspcn1SAP3g/view?usp=sharing"
+              rel="noreferrer"
+              target="_blank"
+              onClick={trackLinkClick.bind(this, 'Portfolio/Lending', 'Lending Paper Click', 'Portfolio Links')}
+            >Research Paper
+            </a>
           </div>
         </div>
         <ul className="secondary-info">
@@ -59,7 +79,13 @@ const PortfolioLending = (props) => {
             <li>Figma</li>
           </ul>
         </ul>
-        <a id="lending-button" className="jump-button" href="#anchor" rel="noreferrer">Jump to prototype</a>
+        <a id="lending-button"
+          className="jump-button"
+          href="#anchor"
+          rel="noreferrer"
+          onClick={trackLinkClick.bind(this, 'Portfolio/Lending', 'Lending Jump Click', 'Portfolio Jump to Prototype')}
+        >Jump to prototype
+        </a>
         <div className="info-section">
           <div id="lending-color" className="section-title">ROLE</div>
           <div className="text-block">

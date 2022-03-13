@@ -23,6 +23,15 @@ import resume from './img/nav/resume.png';
 
 ReactGA.initialize('UA-155129215-2');
 
+const trackLinkClick = (category, action, label) => {
+  console.log('GA event:', category, ':', action, ':', label);
+  ReactGA.event({
+    category,
+    action,
+    label,
+ });
+};
+
 const Nav = (props) => {
   return (
     <ul>
@@ -102,11 +111,13 @@ const Scroll = () => {
       behavior: 'smooth', // for smoothly scrolling
     });
   };
-
   return (
     <>
       {showButton && (
-        <button type="button" onClick={scrollToTop} className="back-to-top">
+        <button type="button"
+          className="back-to-top"
+          onClick={(event) => [scrollToTop(), trackLinkClick('Nav', 'Back to Top Click', 'Back to Top Button')]}
+        >
           <div className="up-arrow" />
         </button>
       )}
@@ -137,15 +148,30 @@ class App extends Component {
           </div>
         </div>
         <div className="icons">
-          <a href="https://www.linkedin.com/in/xinai-cathy-wu" target="_blank" rel="noreferrer" id="linkedin">
+          <a href="https://www.linkedin.com/in/xinai-cathy-wu"
+            target="_blank"
+            rel="noreferrer"
+            id="linkedin"
+            onClick={trackLinkClick.bind(this, 'Contact Links', 'LinkedIn Click', 'Sticky Contact Buttons')}
+          >
             <img src={linkedin} alt="LinkedIn icon" loading="eager" />
             <span id="text">linkedin</span>
           </a>
-          <a href="mailto:xinai.cathy.wu@gmail.com" target="_blank" rel="noreferrer" id="mail">
+          <a href="mailto:xinai.cathy.wu@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            id="mail"
+            onClick={trackLinkClick.bind(this, 'Contact Links', 'Mail Click', 'Sticky Contact Buttons')}
+          >
             <img src={mail} alt="Mail icon" loading="eager" />
             <span id="text">mail</span>
           </a>
-          <a href="https://drive.google.com/file/d/11bBEf4DXBEegXaYLejCiFg3O86Q9wAJ2/view?usp=sharing" target="_blank" rel="noreferrer" id="resume">
+          <a href="https://drive.google.com/file/d/11bBEf4DXBEegXaYLejCiFg3O86Q9wAJ2/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            id="resume"
+            onClick={trackLinkClick.bind(this, 'Contact Links', 'Resume Click', 'Sticky Contact Buttons')}
+          >
             <img src={resume} alt="Resume icon" loading="eager" />
             <span id="text">resume</span>
           </a>

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import FadeIn from 'react-fade-in';
 
 import Footer from './footer';
@@ -8,7 +9,20 @@ import puzzles from '../img/portfolio/spaces/puzzles.png';
 import puzzles2 from '../img/portfolio/spaces/puzzles2.png';
 import arch from '../img/portfolio/spaces/arch.png';
 
+const trackLinkClick = (category, action, label) => {
+  console.log('GA event:', category, ':', action, ':', label);
+  ReactGA.event({
+    category,
+    action,
+    label,
+ });
+};
+
 const PortfolioSpaces = (props) => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+    console.log('page=>', window.location.pathname);
+  }, []);
     return (
       <FadeIn>
         <div className="content">
@@ -29,6 +43,7 @@ const PortfolioSpaces = (props) => {
                 href="https://drive.google.com/file/d/1V3baQxHDy1BNthDxZu1wgLeL0Z_KNnFy/view?usp=sharing"
                 rel="noreferrer"
                 target="_blank"
+                onClick={trackLinkClick.bind(this, 'Portfolio/Spaces', 'Spaces apk Click', 'Portfolio Links')}
               >apk for Oculus Quest
               </a>
             </div>
@@ -52,7 +67,13 @@ const PortfolioSpaces = (props) => {
               <li>Unity</li>
             </ul>
           </ul>
-          <a id="spaces-button" className="jump-button" href="#anchor" rel="noreferrer">Jump to prototype</a>
+          <a id="spaces-button"
+            className="jump-button"
+            href="#anchor"
+            rel="noreferrer"
+            onClick={trackLinkClick.bind(this, 'Portfolio/Spaces', 'Spaces Jump Click', 'Portfolio Jump to Prototype')}
+          >Jump to prototype
+          </a>
           <div className="info-section">
             <div id="spaces-color" className="section-title">ROLE</div>
             <div className="text-block">

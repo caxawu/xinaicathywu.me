@@ -15,6 +15,15 @@ import adventures from '../img/other-works/adventures.png';
 
 import chefsKiss from '../img/other-works/chefsKiss.png';
 
+const trackLinkClick = (category, action, label) => {
+  console.log('GA event:', category, ':', action, ':', label);
+  ReactGA.event({
+    category,
+    action,
+    label,
+ });
+};
+
 const GameDesignStudio = (props) => {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
@@ -45,10 +54,18 @@ const GameDesignStudio = (props) => {
               Responding to anxiety by portraying the different ways anxiety can manifest.
             </div>
             <div className="links">
-              <a href="https://drive.google.com/drive/folders/1w-DcB4q4dI4O4JLZijAd_tjJ0m9ni3e-" target="_blank" rel="noreferrer">
+              <a href="https://drive.google.com/drive/folders/1w-DcB4q4dI4O4JLZijAd_tjJ0m9ni3e-"
+                target="_blank"
+                rel="noreferrer"
+                onClick={trackLinkClick.bind(this, 'Other/FILM/Beyond', 'Play Beyond Click', 'Other Works Links')}
+              >
                 Play Beyond
               </a>
-              <a href="https://www.youtube.com/watch?v=Wrmlwu4vtco" target="_blank" rel="noreferrer">
+              <a href="https://www.youtube.com/watch?v=Wrmlwu4vtco"
+                target="_blank"
+                rel="noreferrer"
+                onClick={trackLinkClick.bind(this, 'Other/FILM/Beyond', 'Watch Gameplay Click', 'Other Works Links')}
+              >
                 Watch the gameplay
               </a>
             </div>
@@ -67,7 +84,11 @@ const GameDesignStudio = (props) => {
               Raising awareness about climate-related challenges facing the Arctic.
             </div>
             <div className="links">
-              <a href="https://rcweb.dartmouth.edu/~f00354t/JourneyFinal.html" target="_blank" rel="noreferrer">
+              <a href="https://rcweb.dartmouth.edu/~f00354t/JourneyFinal.html"
+                target="_blank"
+                rel="noreferrer"
+                onClick={trackLinkClick.bind(this, 'Other/FILM/Journey', 'Play Journey Click', 'Other Works Links')}
+              >
                 Play Journey
               </a>
             </div>
@@ -86,7 +107,11 @@ const GameDesignStudio = (props) => {
               Helping to increase literacy amongst non-native English speakers.
             </div>
             <div className="links">
-              <a href="https://rcweb.dartmouth.edu/~f00354t/StorytellerFinal.html" target="_blank" rel="noreferrer">
+              <a href="https://rcweb.dartmouth.edu/~f00354t/StorytellerFinal.html"
+                target="_blank"
+                rel="noreferrer"
+                onClick={trackLinkClick.bind(this, 'Other/FILM/Storyteller', 'Play Storyteller Click', 'Other Works Links')}
+              >
                 Play Storyteller
               </a>
             </div>
@@ -122,7 +147,11 @@ const FullStackWebDev = (props) => {
               A real-time collaborative post-it note app that supports markdown notation.
             </div>
             <div className="links">
-              <a href="https://trusting-dubinsky-776c89.netlify.app/" target="_blank" rel="noreferrer">
+              <a href="https://trusting-dubinsky-776c89.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+                onClick={trackLinkClick.bind(this, 'Other/COSC/Stickies', 'Add Note Click', 'Other Works Links')}
+              >
                 Add a note
               </a>
             </div>
@@ -141,7 +170,11 @@ const FullStackWebDev = (props) => {
               A Buzzfeed-style quiz that uses HTML, CSS, Javascript, and jquery.
             </div>
             <div className="links">
-              <a href="https://dartmouth-cs52-21s.github.io/lab2-caxawu/" target="_blank" rel="noreferrer">
+              <a href="https://dartmouth-cs52-21s.github.io/lab2-caxawu/"
+                target="_blank"
+                rel="noreferrer"
+                onClick={trackLinkClick.bind(this, 'Other/COSC/Buzzfeed', 'Add Quiz Click', 'Other Works Links')}
+              >
                 Take the quiz
               </a>
             </div>
@@ -160,7 +193,11 @@ const FullStackWebDev = (props) => {
               A CRUD-style content app that uses React, Redux and React-Router.
             </div>
             <div className="links">
-              <a href="https://wizardly-johnson-50073f.netlify.app/" target="_blank" rel="noreferrer">
+              <a href="https://wizardly-johnson-50073f.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+                onClick={trackLinkClick.bind(this, 'Other/COSC/Adventures', 'Track Adventures Click', 'Other Works Links')}
+              >
                 Track an adventure
               </a>
             </div>
@@ -196,7 +233,11 @@ const UIPractice = (props) => {
               A UI redesign of a recipe app.
             </div>
             <div className="links">
-              <a href="https://www.figma.com/proto/zK0CuStIunpXQACQ0PuRqS/Practice?page-id=1%3A736&node-id=5%3A230&viewport=241%2C48%2C0.1&scaling=min-zoom&starting-point-node-id=5%3A22" target="_blank" rel="noreferrer">
+              <a href="https://www.figma.com/proto/zK0CuStIunpXQACQ0PuRqS/Practice?page-id=1%3A736&node-id=5%3A230&viewport=241%2C48%2C0.1&scaling=min-zoom&starting-point-node-id=5%3A22"
+                target="_blank"
+                rel="noreferrer"
+                onClick={trackLinkClick.bind(this, 'Other/UI/Chef', 'See Prototype Click', 'Other Works Links')}
+              >
                 Check out the prototype
               </a>
             </div>

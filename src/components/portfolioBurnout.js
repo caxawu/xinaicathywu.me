@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import FadeIn from 'react-fade-in';
 
 import Footer from './footer';
 
 import clinicianBurnout from '../img/portfolio/burnout/clinicianBurnout.png';
 
+const trackLinkClick = (category, action, label) => {
+  console.log('GA event:', category, ':', action, ':', label);
+  ReactGA.event({
+    category,
+    action,
+    label,
+ });
+};
+
 const PortfolioSpot = (props) => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+    console.log('page=>', window.location.pathname);
+  }, []);
     return (
       <FadeIn>
         <div className="content">
@@ -27,6 +41,7 @@ const PortfolioSpot = (props) => {
                 href="https://drive.google.com/file/d/19Fan3qfljtUrDG37EbjOYMStpVL_XohO/view?usp=sharing"
                 rel="noreferrer"
                 target="_blank"
+                onClick={trackLinkClick.bind(this, 'Portfolio/Burnout', 'Facilitator Guide Click', 'Portfolio Links')}
               >Facilitator&apos;s guide
               </a>
             </div>
@@ -56,6 +71,7 @@ const PortfolioSpot = (props) => {
             href="https://drive.google.com/file/d/1LAEFag4zx8Gf4m8dddNb4qKcPVHGf9Fw/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
+            onClick={trackLinkClick.bind(this, 'Portfolio/Burnout', 'Full Report Click', 'Portfolio Links')}
           >Read the full report
           </a>
           <img id="burnout-img" src={clinicianBurnout} alt="Ranking of Lending Concerns" />

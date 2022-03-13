@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
@@ -15,10 +17,22 @@ import spot from '../img/portfolio/spot.png';
 
 import lending from '../img/portfolio/lending.png';
 
+const trackLinkClick = (category, action, label) => {
+  console.log('GA event:', category, ':', action, ':', label);
+  ReactGA.event({
+    category,
+    action,
+    label,
+ });
+};
+
 const ClinicianBurnout = (props) => {
   return (
     <div className="card">
-      <a href="/portfolio/clinician-burnout" rel="noreferrer">
+      <a href="/portfolio/clinician-burnout"
+        rel="noreferrer"
+        onClick={trackLinkClick.bind(this, 'Portfolio/Web', 'Burnout Click', 'Portfolio Card Nav')}
+      >
         <img src={burnout} alt="Clinician burnout" loading="eager" />
         <div className="description">
           <div className="text">
@@ -41,7 +55,11 @@ const ClinicianBurnout = (props) => {
 const DartmouthRoomSearch = (props) => {
   return (
     <div className="card">
-      <a href="https://docs.google.com/presentation/d/1oQKbHJpGnIfVUPFwohTbwj-nYtcfMaSjgIJReMY9gRM/edit?usp=sharing" target="_blank" rel="noreferrer">
+      <a href="https://docs.google.com/presentation/d/1oQKbHJpGnIfVUPFwohTbwj-nYtcfMaSjgIJReMY9gRM/edit?usp=sharing"
+        target="_blank"
+        rel="noreferrer"
+        onClick={trackLinkClick.bind(this, 'Portfolio/Web', 'Room Search Click', 'Portfolio Card Nav')}
+      >
         <img src={roomSearch} alt="Dartmouth Room Search" loading="eager" />
         <div className="description">
           <div className="text">
@@ -63,7 +81,11 @@ const DartmouthRoomSearch = (props) => {
 const ARTrek = (props) => {
   return (
     <div className="card">
-      <a href="https://devpost.com/software/artrek" target="_blank" rel="noreferrer">
+      <a href="https://devpost.com/software/artrek"
+        target="_blank"
+        rel="noreferrer"
+        onClick={trackLinkClick.bind(this, 'Portfolio/Web', 'ARTrek Click', 'Portfolio Card Nav')}
+      >
         <img src={artrek} alt="ARTrek" loading="eager" />
         <div className="description">
           <div className="text">
@@ -86,7 +108,11 @@ const ARTrek = (props) => {
 const Anivision = (props) => {
   return (
     <div className="card">
-      <a href="https://docs.google.com/presentation/d/1qzPp0H9X9cttaFRP_yWeZjr-L2JkCzEeV6I9AFIzfvE/edit?usp=sharing" target="_blank" rel="noreferrer">
+      <a href="https://docs.google.com/presentation/d/1qzPp0H9X9cttaFRP_yWeZjr-L2JkCzEeV6I9AFIzfvE/edit?usp=sharing"
+        target="_blank"
+        rel="noreferrer"
+        onClick={trackLinkClick.bind(this, 'Portfolio/XR', 'Anivision Click', 'Portfolio Card Nav')}
+      >
         <img src={anivision} alt="Anivision" loading="eager" />
         <div className="description">
           <div className="text">
@@ -109,7 +135,10 @@ const Anivision = (props) => {
 const Spaces = (props) => {
   return (
     <div className="card">
-      <a href="/portfolio/spaces" rel="noreferrer">
+      <a href="/portfolio/spaces"
+        rel="noreferrer"
+        onClick={trackLinkClick.bind(this, 'Portfolio/XR', 'Spaces Click', 'Portfolio Card Nav')}
+      >
         <img src={spaces} alt="Spaces" loading="eager" />
         <div className="description">
           <div className="text">
@@ -131,7 +160,10 @@ const Spaces = (props) => {
 const SpotTheDifference = (props) => {
   return (
     <div className="card">
-      <a href="/portfolio/spot-the-difference" rel="noreferrer">
+      <a href="/portfolio/spot-the-difference"
+        rel="noreferrer"
+        onClick={trackLinkClick.bind(this, 'Portfolio/XR', 'Spot Click', 'Portfolio Card Nav')}
+      >
         <img src={spot} alt="Spot-the-Difference" loading="eager" />
         <div className="description">
           <div className="text">
@@ -154,7 +186,10 @@ const SpotTheDifference = (props) => {
 const SmartphoneLending = (props) => {
   return (
     <div className="card">
-      <a href="/portfolio/smartphone-lending" rel="noreferrer">
+      <a href="/portfolio/smartphone-lending"
+        rel="noreferrer"
+        onClick={trackLinkClick.bind(this, 'Portfolio/Web', 'Lending Click', 'Portfolio Card Nav')}
+      >
         <img src={lending} alt="Smartphone Lending" loading="eager" />
         <div className="description">
           <div className="text">
