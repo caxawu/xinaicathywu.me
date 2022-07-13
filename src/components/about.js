@@ -83,16 +83,16 @@ class About extends Component {
                   <div className="subheading">Currently learning about...</div>
                   <ul>
                     <li>web development (this site!)</li>
-                    <li>low-poly modelling in Autodesk Maya</li>
+                    <li>low-poly modelling in Maya</li>
                     <li>hand painting textures in Substance Painter</li>
-                    <li>designing open-world games in Unity</li>
+                    <li>creating open-world games in Unity</li>
                   </ul>
                   <div className="subheading">Passionate about...</div>
                   <ul>
                     <li>em dashes</li>
                     <li>film soundtracks</li>
                     <li>the autumn 🍂</li>
-                    <li>baking</li>
+                    <li>cooking</li>
                     <li>desserts</li>
                   </ul>
                 </div>

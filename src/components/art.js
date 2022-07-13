@@ -13,6 +13,7 @@ import room from '../img/digital-art/room.png';
 import juice from '../img/digital-art/juice.png';
 import escher from '../img/digital-art/escher.png';
 
+import fruit from '../img/paintings/fruit.png';
 import umbrella from '../img/paintings/umbrella.png';
 import birds from '../img/paintings/birds.png';
 import fence from '../img/paintings/fence.png';
@@ -94,22 +95,29 @@ const Paintings = (props) => {
     <div className="img-section">
       <FadeIn>
         <div className="row">
-          <img src={umbrella} alt="umbrella" loading="eager" />
-          <img src={birds} alt="birds" loading="eager" />
-          <img src={fence} alt="fence" loading="eager" />
+          <div className="inner-column">
+            <img src={fruit} alt="fruit" loading="eager" />
+          </div>
+          <div className="inner-column">
+            <img src={umbrella} alt="umbrella" loading="eager" />
+            <img src={world} alt="world" loading="eager" />
+          </div>
+          <div className="inner-column">
+            <img src={birds} alt="birds" loading="eager" />
+            <img src={fence} alt="fence" loading="eager" />
+          </div>
         </div>
         <div className="row">
-          <img src={abstract} alt="abstract" loading="eager" />
-          <img src={world} alt="world" loading="eager" />
-          <img src={landscape} alt="landscape" loading="eager" />
-        </div>
-        <div className="row">
-          <img src={tuckDrive} alt="tuckDrive" loading="eager" />
+          <img src={door} alt="door" loading="eager" />
           <img src={dragon} alt="dragon" loading="eager" />
         </div>
         <div className="row">
+          <img src={tuckDrive} alt="tuckDrive" loading="eager" />
+          <img src={landscape} alt="landscape" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={abstract} alt="abstract" loading="eager" />
           <img src={ghosts} alt="ghosts" loading="eager" />
-          <img src={door} alt="door" loading="eager" />
           <img src={metal} alt="metal" loading="eager" />
         </div>
       </FadeIn>
