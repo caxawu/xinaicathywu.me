@@ -84,7 +84,7 @@ const GameDesignStudio = (props) => {
               Raising awareness about climate-related challenges facing the Arctic.
             </div>
             <div className="links">
-              <a href="https://rcweb.dartmouth.edu/~f00354t/JourneyFinal.html"
+              <a href="src\components\Arctic.html"
                 target="_blank"
                 rel="noreferrer"
                 onClick={trackLinkClick.bind(this, 'Other/FILM/Journey', 'Play Journey Click', 'Other Works Links')}
@@ -107,7 +107,7 @@ const GameDesignStudio = (props) => {
               Helping to increase literacy amongst non-native English speakers.
             </div>
             <div className="links">
-              <a href="https://rcweb.dartmouth.edu/~f00354t/StorytellerFinal.html"
+              <a href="src\components\Storyteller.html"
                 target="_blank"
                 rel="noreferrer"
                 onClick={trackLinkClick.bind(this, 'Other/FILM/Storyteller', 'Play Storyteller Click', 'Other Works Links')}

@@ -10,8 +10,11 @@ import dioramaWIP from '../img/digital-art/dioramaWIP.png';
 import boatWIP from '../img/digital-art/boatWIP.png';
 import plant from '../img/digital-art/plant.png';
 import room from '../img/digital-art/room.png';
+import kitchen from '../img/digital-art/kitchenAO.jpg';
 import juice from '../img/digital-art/juice.png';
 import escher from '../img/digital-art/escher.png';
+import roomBasics1 from '../img/digital-art/roomBasics1.png';
+import roomBasics2 from '../img/digital-art/roomBasics2.png';
 
 import fruit from '../img/paintings/fruit.png';
 import umbrella from '../img/paintings/umbrella.png';
@@ -74,11 +77,18 @@ const Digital = (props) => {
           <img src={dioramaWIP} alt="dioramaWIP" loading="eager" />
           <img src={boatWIP} alt="boatWIP" loading="eager" />
           <img src={plant} alt="plant" loading="eager" />
+
         </div>
         <div className="row">
           <img src={room} alt="room" loading="eager" />
           <img src={juice} alt="juice" loading="eager" />
           <img src={escher} alt="escher" loading="eager" />
+
+        </div>
+        <div className="row">
+          <img src={kitchen} alt="kitchen" loading="eager" />
+          <img src={roomBasics1} alt="room basics 1" loading="eager" />
+          <img src={roomBasics2} alt="room basics 2" loading="eager" />
         </div>
       </FadeIn>
     </div>
