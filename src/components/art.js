@@ -13,8 +13,8 @@ import room from '../img/digital-art/room.png';
 import kitchen from '../img/digital-art/kitchenAO.jpg';
 import juice from '../img/digital-art/juice.png';
 import escher from '../img/digital-art/escher.png';
-import roomBasics0 from '../img/digital-art/roomBasics0.png';
-import roomBasics1 from '../img/digital-art/roomBasics1.png';
+import roomBasicsFront from '../img/digital-art/roomBasicsFront.png';
+import roomBasicsAngle from '../img/digital-art/roomBasicsAngle.png';
 
 import fruit from '../img/paintings/fruit.png';
 import umbrella from '../img/paintings/umbrella.png';
@@ -87,8 +87,8 @@ const Digital = (props) => {
         </div>
         <div className="row">
           <img src={kitchen} alt="kitchen" loading="eager" />
-          <img src={roomBasics0} alt="room basics render" loading="eager" />
-          <img src={roomBasics1} alt="room basics render angle" loading="eager" />
+          <img src={roomBasicsFront} alt="room basics front render" loading="eager" />
+          <img src={roomBasicsAngle} alt="room basics angle render" loading="eager" />
         </div>
       </FadeIn>
     </div>
