@@ -3,12 +3,14 @@ import ReactGA from 'react-ga';
 import '../style.scss';
 import FadeIn from 'react-fade-in';
 
-import diorama1 from '../img/digital-art/diorama1.png';
+import diorama1 from '../img/digital-art/diorama1.jpg';
 import diorama2 from '../img/digital-art/diorama2.png';
+import diorama3 from '../img/digital-art/diorama3.jpg';
 import boatRender from '../img/digital-art/boatRender.png';
 import dioramaWIP from '../img/digital-art/dioramaWIP.png';
 import boatWIP from '../img/digital-art/boatWIP.png';
 import plant from '../img/digital-art/plant.png';
+import plantTable from '../img/digital-art/plantTable.jpg';
 import room from '../img/digital-art/room.png';
 import kitchen from '../img/digital-art/kitchenAO.jpg';
 import juice from '../img/digital-art/juice.png';
@@ -70,23 +72,29 @@ const Digital = (props) => {
       <FadeIn>
         <div className="row">
           <img src={diorama1} alt="Diorama 1" loading="eager" />
+
+          <img src={diorama3} alt="Diorama 3" loading="eager" />
+
+        </div>
+        <div className="row">
+          <img src={dioramaWIP} alt="dioramaWIP" loading="eager" />
           <img src={diorama2} alt="Diorama 2" loading="eager" />
           <img src={boatRender} alt="boatRender" loading="eager" />
         </div>
         <div className="row">
-          <img src={dioramaWIP} alt="dioramaWIP" loading="eager" />
           <img src={boatWIP} alt="boatWIP" loading="eager" />
           <img src={plant} alt="plant" loading="eager" />
-
+          <img src={plantTable} alt="plant on table" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={juice} alt="juice" loading="eager" />
+          <img src={escher} alt="escher" loading="eager" />
         </div>
         <div className="row">
           <img src={room} alt="room" loading="eager" />
-          <img src={juice} alt="juice" loading="eager" />
-          <img src={escher} alt="escher" loading="eager" />
-
+          <img src={kitchen} alt="kitchen" loading="eager" />
         </div>
         <div className="row">
-          <img src={kitchen} alt="kitchen" loading="eager" />
           <img src={roomBasicsFront} alt="room basics front render" loading="eager" />
           <img src={roomBasicsAngle} alt="room basics angle render" loading="eager" />
         </div>
