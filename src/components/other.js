@@ -54,7 +54,7 @@ const GameDesignStudio = (props) => {
               Responding to anxiety by portraying the different ways anxiety can manifest.
             </div>
             <div className="links">
-              <a href="https://drive.google.com/drive/folders/1w-DcB4q4dI4O4JLZijAd_tjJ0m9ni3e-"
+              <a href="https://caxawu.itch.io/beyond"
                 target="_blank"
                 rel="noreferrer"
                 onClick={trackLinkClick.bind(this, 'Other/FILM/Beyond', 'Play Beyond Click', 'Other Works Links')}
@@ -84,7 +84,7 @@ const GameDesignStudio = (props) => {
               Raising awareness about climate-related challenges facing the Arctic.
             </div>
             <div className="links">
-              <a href="src\components\Arctic.html"
+              <a href="https://caxawu.itch.io/journey"
                 target="_blank"
                 rel="noreferrer"
                 onClick={trackLinkClick.bind(this, 'Other/FILM/Journey', 'Play Journey Click', 'Other Works Links')}
@@ -107,7 +107,7 @@ const GameDesignStudio = (props) => {
               Helping to increase literacy amongst non-native English speakers.
             </div>
             <div className="links">
-              <a href="src\components\Storyteller.html"
+              <a href="https://caxawu.itch.io/storyteller"
                 target="_blank"
                 rel="noreferrer"
                 onClick={trackLinkClick.bind(this, 'Other/FILM/Storyteller', 'Play Storyteller Click', 'Other Works Links')}
