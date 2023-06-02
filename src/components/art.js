@@ -61,7 +61,7 @@ import bird from '../img/drawings/bird.png';
 import tunnel from '../img/drawings/tunnel.png';
 import creature from '../img/drawings/creature.png';
 
-const Digital = (props) => {
+const Modelling = (props) => {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
     console.log('page=>', window.location.pathname);
@@ -72,7 +72,6 @@ const Digital = (props) => {
       <FadeIn>
         <div className="row">
           <img src={diorama1} alt="Diorama 1" loading="eager" />
-
           <img src={diorama3} alt="Diorama 3" loading="eager" />
 
         </div>
@@ -97,6 +96,32 @@ const Digital = (props) => {
         <div className="row">
           <img src={roomBasicsFront} alt="room basics front render" loading="eager" />
           <img src={roomBasicsAngle} alt="room basics angle render" loading="eager" />
+        </div>
+      </FadeIn>
+    </div>
+  );
+};
+
+const Animation = (props) => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+    console.log('page=>', window.location.pathname);
+  }, []);
+
+  return (
+    <div className="img-section">
+      <FadeIn>
+        <div className="row">
+          <img src="https://media3.giphy.com/media/VOlbJCYXe3WbdIeIed/giphy.gif" alt="Jin Final" loading="eager" />
+          <img src="https://media2.giphy.com/media/bBYtlby2PTB5VEsqhp/giphy.gif" alt="Bowling and beach ball" loading="eager" />
+
+        </div>
+        <div className="row">
+          <img src="https://media4.giphy.com/media/HZvUGFeDJVvCvTKT9I/giphy.gif" alt="Elven walk cycle" loading="eager" />
+          <img src="https://media1.giphy.com/media/tSiLfpR8ET4FO6xS2H/giphy.gif" alt="Ballie walk cycle" loading="eager" />
+        </div>
+        <div className="row">
+          <img src="https://media0.giphy.com/media/Yah0ms0gI9fxzMvqat/giphy.gif" alt="Bouncing ball" loading="eager" />
         </div>
       </FadeIn>
     </div>
@@ -201,5 +226,5 @@ const Drawings = (props) => {
 };
 
 export {
-  Digital, Paintings, Drawings,
+  Modelling, Animation, Paintings, Drawings,
 };

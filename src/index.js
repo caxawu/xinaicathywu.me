@@ -13,7 +13,7 @@ import PortfolioSpaces from './components/portfolioSpaces';
 import PortfolioSpot from './components/portfolioSpot';
 import PortfolioBurnout from './components/portfolioBurnout';
 import {
-  Digital, Paintings, Drawings,
+  Modelling, Animation, Paintings, Drawings,
 } from './components/art';
 import Footer from './components/footer';
 
@@ -38,7 +38,7 @@ const Nav = (props) => {
       <li><NavLink to="/">about</NavLink></li>
       <li><NavLink to="/portfolio">portfolio</NavLink></li>
       <li><NavLink to="/other-works">other works</NavLink></li>
-      <li><NavLink to="/art/digital-art">studio & digital art</NavLink></li>
+      <li><NavLink to="/art/3d-modelling">studio & digital art</NavLink></li>
     </ul>
   );
 };
@@ -46,7 +46,9 @@ const Nav = (props) => {
 const SecondaryNav = (props) => {
   return (
     <ul>
-      <li><NavLink to="/art/digital-art">digital art</NavLink></li>
+      <li><NavLink to="/art/3d-modelling">3d modelling</NavLink></li>
+      |
+      <li><NavLink to="/art/animation">animation</NavLink></li>
       |
       <li><NavLink to="/art/paintings">paintings</NavLink></li>
       |
@@ -55,13 +57,25 @@ const SecondaryNav = (props) => {
   );
 };
 
-const DigitalPage = (props) => {
+const ModellingPage = (props) => {
   return (
     <div className="content">
       <div className="secondary-nav">
         <SecondaryNav />
       </div>
-      <Digital />
+      <Modelling />
+      <Footer />
+    </div>
+  );
+};
+
+const AnimationPage = (props) => {
+  return (
+    <div className="content">
+      <div className="secondary-nav">
+        <SecondaryNav />
+      </div>
+      <Animation />
       <Footer />
     </div>
   );
@@ -187,7 +201,8 @@ class App extends Component {
           <Route path="/portfolio/clinician-burnout" element={<PortfolioBurnout />} />
 
           <Route path="/other-works" element={<Other />} />
-          <Route path="/art/digital-art" element={<DigitalPage />} />
+          <Route path="/art/3d-modelling" element={<ModellingPage />} />
+          <Route path="/art/animation" element={<AnimationPage />} />
           <Route path="/art/paintings" element={<PaintingsPage />} />
           <Route path="/art/drawings" element={<DrawingsPage />} />
           <Route render={() => (<div>Page not found </div>)} />
