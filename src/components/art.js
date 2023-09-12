@@ -30,6 +30,10 @@ import dragon from '../img/paintings/dragon.png';
 import ghosts from '../img/paintings/ghosts.png';
 import door from '../img/paintings/door.png';
 import metal from '../img/paintings/metal.png';
+import batman from '../img/paintings/batman.png';
+import daisies from '../img/paintings/daisies.png';
+import midnights from '../img/paintings/midnights.png';
+import ocean from '../img/paintings/ocean.png';
 
 import fruit1 from '../img/drawings/fruit1.png';
 import fruit2 from '../img/drawings/fruit2.png';
@@ -60,6 +64,7 @@ import bellows from '../img/drawings/bellows.png';
 import bird from '../img/drawings/bird.png';
 import tunnel from '../img/drawings/tunnel.png';
 import creature from '../img/drawings/creature.png';
+import statues from '../img/drawings/statues.png';
 
 const Modelling = (props) => {
   useEffect(() => {
@@ -143,7 +148,7 @@ const Paintings = (props) => {
           </div>
           <div className="inner-column">
             <img src={umbrella} alt="umbrella" loading="eager" />
-            <img src={world} alt="world" loading="eager" />
+            <img src={daisies} alt="daisies" loading="eager" />
           </div>
           <div className="inner-column">
             <img src={birds} alt="birds" loading="eager" />
@@ -152,16 +157,24 @@ const Paintings = (props) => {
         </div>
         <div className="row">
           <img src={door} alt="door" loading="eager" />
+          <img src={midnights} alt="midnights" loading="eager" />
+        </div>
+        <div className="row">
           <img src={dragon} alt="dragon" loading="eager" />
+          <img src={metal} alt="metal" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={ocean} alt="ocean" loading="eager" />
+          <img src={batman} alt="batman" loading="eager" />
         </div>
         <div className="row">
           <img src={tuckDrive} alt="tuckDrive" loading="eager" />
           <img src={landscape} alt="landscape" loading="eager" />
         </div>
         <div className="row">
-          <img src={abstract} alt="abstract" loading="eager" />
           <img src={ghosts} alt="ghosts" loading="eager" />
-          <img src={metal} alt="metal" loading="eager" />
+          <img src={abstract} alt="abstract" loading="eager" />
+          <img src={world} alt="world" loading="eager" />
         </div>
       </FadeIn>
     </div>
@@ -219,6 +232,9 @@ const Drawings = (props) => {
           <img src={bird} alt="bird" loading="eager" />
           <img src={tunnel} alt="tunnel" loading="eager" />
           <img src={creature} alt="creature" loading="eager" />
+        </div>
+        <div className="row">
+          <img src={statues} alt="statues" loading="eager" />
         </div>
       </FadeIn>
     </div>
